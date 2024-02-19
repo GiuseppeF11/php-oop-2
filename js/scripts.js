@@ -5,7 +5,7 @@ const {createApp} = Vue;
 createApp ({
     data() {
         return {
-            message: 'Template PHP + Css + Js + Vue + Axios',
+           
         };
     }
     // Monto l'istanza di Vue in pagina
