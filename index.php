@@ -5,6 +5,8 @@ require_once __DIR__ . './classes/Toy.php';
 require_once __DIR__ . './classes/Pets_Bed.php';
 require_once __DIR__ . './classes/Category.php';
 require_once __DIR__ . './Library.php';
+
+$currentDate = date('Y-m-d');
 ?>
 
 
@@ -44,7 +46,9 @@ require_once __DIR__ . './Library.php';
 											<li> <strong>Marca: </strong> <?php echo $food->brand ?></li>
 											<li> <strong>Prezzo: </strong> <?php echo $food->price ?> € </li>
 											<li> <strong>Descrizione: </strong> <?php echo $food->details ?></li>
-											<li> <strong>Scadenza: </strong> <?php echo $food->expirationDate ?></li>
+											<li class="<?php echo ($food->expirationDate < $currentDate ? 'text-danger' : '') ?>"> 
+												<strong>Scadenza: </strong> <?php echo $food->expirationDate ?>
+											</li>
 											<li> <strong>Gusto: </strong> <?php echo $food->composition ?></li>
 											<li> <strong>Peso: </strong> <?php echo $food->weight ?> Kg</li>
 										</ul>

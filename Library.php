@@ -36,7 +36,7 @@ $Foods = [
         'Appetitosi',
         'https://www.ipelosi.it/cache/oasy-dog-adult-performance-pollo-12-kg_1822_it-750-750.jpg',
         $dogsCategory,
-        '2024-08-11',
+        '2023-08-11',
         'Pollo',
         'no allergies',
         12
@@ -48,7 +48,7 @@ $Foods = [
         'Appetitosi',
         'https://www.ipelosi.it/cache/oasy-dog-puppy-junior-medium-pollo-12-kg_1819_it-750-750.jpg',
         $catCategory,
-        '2024-05-11',
+        '2024-02-11',
         'Pollo',
         'no allergies',
         12
@@ -63,7 +63,7 @@ $Foods = [
         '2024-05-18',
         'Pollo',
         'no allergies',
-        1
+        'pesoInLettere'
     ),
 ];
 

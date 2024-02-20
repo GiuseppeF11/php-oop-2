@@ -36,6 +36,12 @@ class Food extends Product {
             $this->composition = $composition;
             $this->allergies = $allergies;
             $this->weight = $weight;
+            if (is_int($weight)) {
+                $this->weight = $weight;
+            }
+            else {
+                throw new Exception('Is not a Int');
+            }
         }
 
         public function expiredFnc($expirationDate) {
