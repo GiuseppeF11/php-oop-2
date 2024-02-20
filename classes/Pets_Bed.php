@@ -7,24 +7,22 @@ class Pets_Bed extends Product {
 
         public function __construct(
             string $name,
-            string $category,
             string $brand,
             string $price,
             string $details,
             string $img,
-            /* Categorie $category, */
+            $category,
             string $materials,
             string $size,
         )
         {
             parent::__construct(
                 $name,
-                $category,
                 $brand,
                 $price,
                 $details,
                 $img,
-               /*  $category, */
+                $category,
             );
             $this->materials = $materials;
             $this->size = $size;

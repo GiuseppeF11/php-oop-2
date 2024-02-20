@@ -1,21 +1,20 @@
 <?php
 require_once __DIR__.'./Product.php';
 
-class Categorie extends Product {
+class Food extends Product {
         public $expirationDate;
         public $expired = false;
         public $composition;
         public $allergies;
         public $weight;
 
-        public function __construct
-        (
+        public function __construct(
             string $name,
             string $brand,
             string $price,
             string $details,
             string $img,
-            /* Categorie $category, */
+            $category,
             string $expirationDate,
             string $composition,
             string $allergies,
@@ -28,7 +27,7 @@ class Categorie extends Product {
                 $price,
                 $details,
                 $img,
-               /*  $category, */
+                $category,
             );
             $this->expirationDate = $expirationDate;
 

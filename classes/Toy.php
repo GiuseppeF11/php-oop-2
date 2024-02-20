@@ -7,12 +7,11 @@ class Toy extends Product {
 
         public function __construct(
             string $name,
-            string $category,
             string $brand,
             string $price,
             string $details,
             string $img,
-            /* Categorie $category, */
+            $category,
             string $materials,
             string $description,
             string $pet_size,
@@ -21,12 +20,11 @@ class Toy extends Product {
         {
             parent::__construct(
                 $name,
-                $category,
                 $brand,
                 $price,
                 $details,
                 $img,
-               /*  $category, */
+                $category,
                 $materials,
                 $description,
                 $pet_size,
