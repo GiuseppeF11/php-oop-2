@@ -40,7 +40,7 @@ class Food extends Product {
                 $this->weight = $weight;
             }
             else {
-                throw new Exception('Is not a Int');
+                throw new Exception('Is not a String');
             }
         }
 
