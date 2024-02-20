@@ -2,6 +2,7 @@
 class Product
 {
     public $name;
+    public $category;
     public $brand;
     public $price;
     public $details;
@@ -10,6 +11,7 @@ class Product
 
     public function __construct(
         string $name,
+        string $category,
         string $brand,
         string $price,
         string $details,
@@ -18,6 +20,7 @@ class Product
 
     ) {
         $this->name = $name;
+        $this->category = $category;
         $this->brand = $brand;
         $this->price = $price;
         $this->details = $details;

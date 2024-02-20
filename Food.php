@@ -10,6 +10,7 @@ class Food extends Product {
 
         public function __construct(
             string $name,
+            string $category,
             string $brand,
             string $price,
             string $details,
@@ -23,6 +24,7 @@ class Food extends Product {
         {
             parent::__construct(
                 $name,
+                $category,
                 $brand,
                 $price,
                 $details,

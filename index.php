@@ -2,9 +2,9 @@
 require_once __DIR__ . './Product.php';
 require_once __DIR__ . './Food.php';
 require_once __DIR__ . './Toy.php';
+require_once __DIR__ . './Pets_Bed.php';
 require_once __DIR__ . './Categorie.php';
 require_once __DIR__ . './Library.php';
-
 ?>
 
 
@@ -31,23 +31,83 @@ require_once __DIR__ . './Library.php';
 <body class="bg-warning-subtle py-5">
     <div id="app">
         <div class="container">
-            <div class="row row-cols-5">
-                <?php foreach ($Products as $product) {?>
+            <h1>Pet's Food</h1>
+            <div class="row row-cols-4">
+                <?php foreach ($Foods as $food) {?>
                     <div class="col">
-                        <div class="card p-2">
+                        <div class="card p-2 mb-5">
                             <div class="mb-3 text">
-                                <h4 class="title"><?php echo $product->name ?></h4>
-                                <?php /* if ($product get_class(Products) === Food ) */ {?> <!-- Aggiungere testo differente in base al prodotto -->
+                                <h4 class="title"><?php echo $food->name ?></h4>
+                                <?php {?>
                                     <div class="details">
-                                        <i class="fa-solid fa-dog"></i>
-                                        <p> <strong>Marca: </strong> <?php echo $product->brand ?></p>
-                                        <p> <strong>Prezzo: </strong> <?php echo $product->price ?> € </p>
-                                        <p> <strong>Descrizione: </strong> <?php echo $product->details ?></p>
+                                        <i class="fa-solid <?php echo $food->category?>"></i>
+                                        <p> <strong>Marca: </strong> <?php echo $food->brand ?></p>
+                                        <p> <strong>Prezzo: </strong> <?php echo $food->price ?> € </p>
+                                        <p> <strong>Descrizione: </strong> <?php echo $food->details ?></p>
+                                        <p> <strong>Scadenza: </strong> <?php echo $food->expirationDate ?></p>
+                                        <p> <strong>Gusto: </strong> <?php echo $food->composition ?></p>
+                                        <p> <strong>Peso: </strong> <?php echo $food->weight ?> Kg</p>
                                     </div>
                                 <?php }?>
                             </div>
                             <div class="img-box">
-                                <img src="<?php echo $product->img ?>" alt="Oasi Porl Small">
+                                <img src="<?php echo $food->img ?>" alt="Oasi Porl Small">
+                            </div>
+                        </div>
+                    </div>
+                <?php }?>
+            </div>
+
+            <hr>
+
+            <h1>Toys's Food</h1>
+            <div class="row row-cols-4">
+                <?php foreach ($Toys as $toy) {?>
+                    <div class="col">
+                        <div class="card p-2">
+                            <div class="mb-3 text">
+                                <h4 class="title"><?php echo $toy->name ?></h4>
+                                <?php {?>
+                                    <div class="details">
+                                    <i class="fa-solid <?php echo $toy->category?>"></i>
+                                        <p> <strong>Marca: </strong> <?php echo $toy->brand ?></p>
+                                        <p> <strong>Prezzo: </strong> <?php echo $toy->price ?> € </p>
+                                        <p> <strong>Descrizione: </strong> <?php echo $toy->details ?></p>
+                                        <p> <strong>Materiali: </strong> <?php echo $toy->materials ?></p>
+                                        <p> <strong>Taglia: </strong> <?php echo $toy->pet_size ?></p>
+                                    </div>
+                                <?php }?>
+                            </div>
+                            <div class="img-box">
+                                <img src="<?php echo $toy->img ?>" alt="Oasi Porl Small">
+                            </div>
+                        </div>
+                    </div>
+                <?php }?>
+            </div>
+
+            <hr>
+
+            <h1>Pets's Beds</h1>
+            <div class="row row-cols-4">
+                <?php foreach ($Pets_Bed as $bed) {?>
+                    <div class="col">
+                        <div class="card p-2">
+                            <div class="mb-3 text">
+                                <h4 class="title"><?php echo $bed->name ?></h4>
+                                <?php {?>
+                                    <div class="details">
+                                        <i class="fa-solid <?php echo $bed->category?>"></i>
+                                        <p> <strong>Marca: </strong> <?php echo $bed->brand ?></p>
+                                        <p> <strong>Prezzo: </strong> <?php echo $bed->price ?> € </p>
+                                        <p> <strong>Descrizione: </strong> <?php echo $bed->details ?></p>
+                                        <p> <strong>Materiali: </strong> <?php echo $bed->materials ?></p>
+                                        <p> <strong>Taglia: </strong> <?php echo $bed->size ?></p>
+                                    </div>
+                                <?php }?>
+                            </div>
+                            <div class="img-box">
+                                <img src="<?php echo $bed->img ?>" alt="Oasi Porl Small">
                             </div>
                         </div>
                     </div>
