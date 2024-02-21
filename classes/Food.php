@@ -18,7 +18,7 @@ class Food extends Product {
             string $expirationDate,
             string $composition,
             string $allergies,
-            int $weight,
+            $weight,
         )
         {
             parent::__construct(
@@ -35,12 +35,11 @@ class Food extends Product {
             
             $this->composition = $composition;
             $this->allergies = $allergies;
-            $this->weight = $weight;
             if (is_int($weight)) {
                 $this->weight = $weight;
             }
             else {
-                throw new Exception('Is not a String');
+                throw new Exception('ERRORE: Is not a Int');
             }
         }
 

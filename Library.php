@@ -1,9 +1,18 @@
-<?php 
+<?php
 require_once __DIR__ . './classes/Product.php';
 require_once __DIR__ . './classes/Category.php';
 
 $dogsCategory = new Category('🐶');
 $catCategory = new Category('🐱');
+
+class FoodException extends Exception
+{
+    public function __construct($message)
+    {
+        parent::__construct("Error in Food: " . $message);
+    }
+}
+
 try {
     $Foods = [
         $oasi_pork_small = new Food(
@@ -67,7 +76,11 @@ try {
             1
         ),
     ];
+} catch (Exception $e) {
+    echo '<h1> Errore Giuseppe</h1>';
+}
 
+try {
     $Toys = [
         $squirrle = new Toy(
             'Scoiattolo Peluche',
@@ -93,6 +106,11 @@ try {
         ),
     ];
 
+} catch (Exception $e) {
+    echo '<h1> Errore Giuseppe</h1>';
+}
+
+try {
     $Pets_Bed = [
         $dog_bed = new Pets_Bed(
             'Cuccia cane morbida',
@@ -103,11 +121,12 @@ try {
             $dogsCategory,
             'Spugna',
             'Medio/Grande',
+            20,
+            50,
         ),
     ];
+
+} catch (Exception $e) {
+    echo '<h1> Errore Giuseppe</h1>';
 }
 
-catch (Exception $e){
-    echo '<h1> Error </h1>';
-}
- 

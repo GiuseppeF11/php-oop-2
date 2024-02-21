@@ -107,6 +107,8 @@ $currentDate = date('Y-m-d');
 													<li> <strong>Descrizione: </strong> <?php echo $bed->details ?></li>
 													<li> <strong>Materiali: </strong> <?php echo $bed->materials ?></li>
 													<li> <strong>Taglia: </strong> <?php echo $bed->size ?></li>
+													<li> <strong>Lunghezza: </strong> <?php echo $bed->length ?></li>
+													<li> <strong>Larghezza: </strong> <?php echo $bed->width ?></li>
                                     </ul>
                                 <?php }?>
                             </div>
